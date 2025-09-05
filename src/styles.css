@@ -1,4 +1,67 @@
 /* You can add global styles to this file, and also import other style files */
+fieldset {
+    border: 1px solid #ced4da;
+    padding: 1.5rem;
+    border-radius: 0.25rem;
+    position: relative;
+}
 
+legend {
+    font-size: 1.25rem;
+    font-weight: 500;
+    padding: 0 10px;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    background-color: #f8f9fa;
+    position: absolute;
+    top: -0.6em;
+    left: 0.75rem;
+}
+
+.form-check-inline {
+    margin-right: 1rem;
+}
+
+.result-card {
+    display: none;
+}
+
+.input-error {
+    border: 2px solid red;
+    box-shadow: 0 0 5px red;
+}
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background-color: #e0e0e6 !important;}
+
+.thead th {
+    position: sticky;
+    top: 0;
+}
+
+.btn-sm{
+    padding: 0.25rem 0.5rem;
+    font-size: 0.8rem;
+}
+
+input[readonly], 
+textarea[readonly] {
+  background-color: #e9ecef; /* Color de fondo similar a un campo deshabilitado */
+  cursor: not-allowed;       /* Mostrar cursor de "no permitido" */
+  color: #6c757d;            /* Texto en un color más claro */
+  opacity: 1;                /* Elimina la opacidad para hacer el texto claro */
+}
+
+.readonly-select {
+    background-color: #e9ecef; /* Fondo gris claro */
+    color: #6c757d;            /* Texto claro */
+    cursor: not-allowed;        /* Cursor de "no permitido" */
+    pointer-events: none;       /* Evita interacción */
+}
+
+input[type="radio"].readonly-radio {
+    background-color: #e9ecef;
+    color: #6c757d;
+    cursor: not-allowed;      /* Mostrar cursor de "no permitido" */
+    pointer-events: none;     /* Evitar que el usuario pueda seleccionarlo */
+    opacity: 0.6;             /* Hacerlo un poco más transparente */
+}

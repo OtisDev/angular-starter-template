@@ -1,1 +1,42 @@
-<p>header works!</p>
+<nav class="sidebar-wrapper">
+    <!-- Sidebar brand starts -->
+    <div class="sidebar-brand">
+        <a href="#" onclick="event.preventDefault()" class="logo">
+            <img src="assets/images/logo.png" alt="Sedapal Dashboards" />
+        </a>
+    </div>
+    <!-- Sidebar brand starts -->
+
+    <!-- Sidebar menu starts -->
+    <div class="sidebar-menu">
+        <div class="sidebarMenuScroll">
+            <ul>
+                <li *ngFor="let item of menuItems; let i = index" [ngClass]="
+                {'sidebar-dropdown':item.children.length > 0,'active' : activeIndex === i}
+                 " [routerLinkActive]="item.children.length > 0 ? '' : 'active-page-link'"
+                    [routerLinkActiveOptions]="{ exact: true }">
+                    <a [routerLink]="item.path" *ngIf="item.children.length == 0"
+                        (click)="pressClick(item.children.length > 0)">
+                        <!-- <i class="material-icons">{{item.icon}}</i> -->
+                        <i class="{{item.icon}}"></i>
+                        <span class="menu-text">{{item.name}}</span>
+                    </a>
+                    <a *ngIf="item.children.length > 0" href="javascript:void(0)" (click)="toggleMenu(i)">
+                        <!-- <i class="material-icons">{{item.icon}}</i> -->
+                        <i class="{{item.icon}}"></i>
+                        <span class="menu-text">{{item.name}}</span>
+                    </a>
+                    <div *ngIf="activeIndex === i" class="sidebar-submenu">
+                        <ul>
+                            <li *ngFor="let child of item.children">
+                                <a [routerLink]="child.path" routerLinkActive="current-page" (click)="pressClick()"
+                                    [routerLinkActiveOptions]="{ exact: true }">{{child.name}}</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- Sidebar menu ends -->
+</nav>
