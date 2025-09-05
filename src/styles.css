@@ -31,7 +31,7 @@ legend {
     box-shadow: 0 0 5px red;
 }
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background-color: #e0e0e6 !important;}
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background-color: #ECECEE !important;}
 
 .thead th {
     position: sticky;
@@ -43,7 +43,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background-
     font-size: 0.8rem;
 }
 
-input[readonly], 
+input[readonly],
 textarea[readonly] {
   background-color: #e9ecef; /* Color de fondo similar a un campo deshabilitado */
   cursor: not-allowed;       /* Mostrar cursor de "no permitido" */
