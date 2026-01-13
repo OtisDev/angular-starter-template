@@ -7,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrl: './home.css'
 })
 export class Home {
+  title: string = 'Home Component';
 
+  change(){
+    this.title = 'Title Changed';
+  }
 }
